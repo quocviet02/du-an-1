@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .lmao{
+        color: rgb(0, 123, 231);
+        font-size: 50px;
+    }
+    .lmao:hover{
+        font-weight: 600;
+        color: blanchedalmond;
+    }
+    .bruh{
+        color: aqua;
+        text-align: center;
+        font-size: 100px;
+    }
+    .test{
+        color: rgb(210, 231, 15);
+        text-align: center;
+        font-size: 100px;
+    }
+   
+</style>
+<body>
+    <div class="box box_1 box_2">Heading</div>
+</body>
+<script>
+    var example1 = document.querySelector('.box');
+    example1.classList.add('lmao','bruh','test');//thêm mới class vào element node(lấy đối số cuối cùng)
+    console.log(example1.classList.contains('lmao'));//kiểm tra xem class có tồn tại hay không.
+    // setTimeout(()=>{
+    //     example1.classList.remove('test');// xóa class
+    // },4000);
+    setInterval(()=>{
+        example1.classList.toggle('test');// có thì xóa, không có thì thêm class
+    },1000);
+</script>
+</html>

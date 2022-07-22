@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var promise = new Promise(
+        function (resolve,reject) {
+            //khi thành công thì gọi đến: resolve
+            //khi thất bại thì gọi đến: reject
+            resolve('đúng');
+        }
+    );
+    promise
+    .then(function () { //thực hiện khi thành công
+        return 'ham1'
+    })
+    .then(function (value) { //đằng sau cần value của đằng trước để thực thi(nếu đằng trước ko return gì thì đằng sau = undefined)
+        console.log(value);
+        return 'ham2'
+    })
+    .then(function (value) { 
+        console.log(value);
+        return 'ham3'
+    })
+    .then(function (value) { 
+        console.log(value);
+        
+    })
+    .catch(function () { //thực hiện khi thất bại
+        console.log('sai');
+    })
+    .finally(function () { //thực hiện khi cả thành công lẫn thất bại
+        console.log('đúng hoặc sai');
+    })
+
+    //là 1 khái niệm xử lý thao tác bất đồng bộ. trước khi có promise thì thường xử dụng call back
+    //  và call back thường có 1 vấn đề là call back hell(nhìn dối mắt và khó sử dụng) nên promise được sinh ra
+    //  để khác phục call back hell
+</script>
+<body>
+    
+</body>
+</html>

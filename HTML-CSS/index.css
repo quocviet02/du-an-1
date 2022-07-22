@@ -1,0 +1,185 @@
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html{
+    line-height: 1.6rem;
+    box-sizing: border-box;
+ 
+    
+}
+
+
+/*Animation*/
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+/*modal*/
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.2);
+}
+.body{
+    
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    /* position: relative; */
+    z-index: 1;
+    
+    font:"Open Sans", sans-serif;
+}
+.inner{
+    width: 820px;
+    height: 400px;
+    margin: 0 20px 0 20px ;
+    /* box-sizing: border-box; */
+}
+.all_form{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.form_dangky{
+    margin: 0 20px 0 0;
+    
+    /* justify-content: flex-start; */
+    /* width: 449px; */
+    flex: 4;
+}
+.form_dangnhap{
+    flex: 4;
+    margin-left: 40px;
+}
+.background{
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+    
+}
+.heading1{
+    font-weight: 500;
+    
+}
+.heading2{
+    font-weight: 500;
+    margin-right: 214px;
+  
+}
+
+.btn_dangnhap{
+    cursor: pointer;
+    min-width: 100px;
+    height: 40px;
+    background-color: black;
+    border-radius: 2px;
+    color: antiquewhite;
+    outline: none;
+    font-family: 'Oswald', sans-serif;;
+    padding: 0;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    
+}
+.btn_dangnhap:hover{
+    opacity: 0.8;
+    
+}
+.form_input{
+   
+    width: 293px;
+    margin: 5px 0 10px 0px;
+    height: 40px;
+    border: 1px solid pink;
+    border-radius: 2px;
+    outline: none;
+    font-size: 16px ;
+}
+.form_input:focus{
+    border-color: #888;
+}
+.tieude{
+    
+    font-weight: 300;
+    font-size: 14px;
+    width: 150px;
+    margin-right:20px ;
+    
+}
+
+.forget_password{
+    
+    
+    padding-top: 20px;
+   
+}
+.forget_password a{
+    text-decoration: none;
+    color: black;
+}
+.line{
+    display: block;
+    border-right:0.5px solid pink ;
+    height: 264px;
+    opacity: 0.4;
+    margin-right: 69px;
+    padding-left: 31px;
+    
+    flex: 1;
+}
+.group_form{
+   width: 200px;
+  
+
+}
+
+
+.header_fist{
+    background-image:linear-gradient(180deg, black, rgba(26, 20, 20, 0.973)) ;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+        
+}
+.text_heading_fist{
+    font-size: 11px;
+    font-weight: 500;
+    list-style: none;
+    line-height: 2px;
+    margin-left: 20px;
+}
+.text_heading_fist1{
+    padding: 0 20px 0 60px;
+    font-size: 11px;
+    font-weight: 500;
+    list-style: none;
+    line-height: 2px;
+}
+
+

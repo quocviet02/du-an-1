@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var arr =[
+        {
+            id: 1,
+            name:'viet',
+            status: 0
+        },
+        {
+            id: 2,
+            name:'hehe',
+            status: 4
+        },
+        {
+            id: 3,
+            name:'huhu',
+            status: 4
+        },
+        {
+            id: 4,
+            name:'haha',
+            status: 3
+        },
+        {
+            id: 5,
+            name:'hihi',
+            status: 1
+        }
+    ];
+    var result = arr.every(function(fist,index){
+        return fist.status !==0;
+    });
+    console.log(result);
+//    var result1 = 0;
+//    for (const i of arr) {
+//      result1 += i.name;
+//    }
+//    console.log(result1)
+var i = 0;
+var result2 = arr.reduce(function ham(a,b,c,d) {
+    
+    // console.table({
+    //     'lượt chạy': i,
+    //     'biến tích trữ':a
+
+    // });
+    // console.log('hdhdh',b)
+    return a + b.id;
+},5)
+console.log(result2)
+
+// var arr = [1,2,34,5,4,4,4,3];
+// console.log([...(new Set(arr))]);
+function giaThua(number) {
+  var output = 1;
+  for (var i = number; i > 0; i--) {
+    output = output * i;
+    
+    
+  }
+  return output;
+ 
+}
+// console.log(giaThua(7));
+function giaiThua(number) {
+ if(number > 0){
+  return number + giaiThua(number - 1)
+ }
+ return 1;
+}
+console.log(giaiThua(4))
+
+var arrHuychien = [1,2,3,4,5,6];
+// arrHuychien.length = 5;
+// arrHuychien.splice(1,1,'cmm') //sửa
+// console.log(arrHuychien) //xóa
+// console.log(arrHuychien.push('Huy chiến')) 
+
+var copy =[...arrHuychien] 
+alert(copy);
+   
+   
+   
+</script>
+<body>
+    
+</body>
+</html>

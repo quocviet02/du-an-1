@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .haha{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 56px;
+    color: aquamarine;
+
+  }
+  .haha:hover{
+    color: red;
+  }
+</style>
+<!-- innText lấy ra phần text của element
+      innerHTML element vào element
+      uoter
+-->
+<body>
+  
+  <h1  class="name" contenteditable="">burh burh lmao</h1>
+  <h1 class="okk">hehehe</h1>
+  <h1 class="okk">hehehe</h1>
+  <h1 id="nameid">text</h1>
+  <h1 class="innerHtml">style bằng js</h1>
+  <div class="innerhtml">
+    <h1>inner</h1>
+    <h2>hdhdh</h2>
+  </div>
+</body>
+st
+<script>
+  var name2 = document.getElementsByClassName('okk')
+  var name1 = document.querySelector('h1');
+  var name3 = document.getElementById('nameid')
+  var name4 = document.querySelector('.innerHtml');
+  var inn = document.querySelector('.innerhtml')
+  name1.title="heading";
+
+  name1.setAttribute('class','haha');//Attribute tùy biến
+  console.log(name1.getAttribute('title'));
+  
+  name3.innerHTML = ' <h1 class= hTml>mêm</h1>';
+  name2.innerText = 'đây là innertext';
+  console.log(inn.innerText);  
+  Object.assign(name4.style,{
+    fontSize: '320px',
+    color: 'red',
+
+  })
+</script>
+</html>

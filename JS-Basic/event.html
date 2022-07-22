@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="onclick">
+    <button class="sub" type="submit">Gửi yêu cầu</button>
+    <button class="sub" type="submit">Gửi yêu cầu 1</button>
+    <button class="sub" type="submit">Gửi yêu cầu 2</button>
+  </div>
+   <div class="input">
+    <input type="text">
+    <input type="checkbox" name="" id="">
+    <select name="" id="">
+      <option value="value1">1</option>
+      <option value="value2">2</option>
+      <option value="value3">3</option>
+    </select>
+   </div>
+</body>
+<script>
+  var but1= document.querySelectorAll('button');  
+  for (var i = 0; i < but1.length; i++) {
+  but1[i].onclick = function (e) {
+    console.log(e.target);
+  } 
+  }
+
+
+  var input1 = document.querySelector('select')//'input[type="checkbox"]''
+  input1.onchange=function(e){
+    console.log( e.target.value)
+  }
+  document.onkeyup = function (e) {
+    switch (e.which) {
+      case 27:
+        console.log('trả tiền tao')
+        break;
+  
+    }
+  }
+
+  
+</script>
+</html>

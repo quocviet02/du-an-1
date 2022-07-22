@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+  var rsult ='a' && 'b' && 'null'; // đọc từng giá trị từ trái sang phải(lấy từng giá trị giống với giá trị false)lấy giá trị cuối gán vào result
+  var result ='a' || 'b' || 'c';// lấy giá trị đầu tiên để gán vào result
+  if (result) {
+    console.log('kết quả đúng '+result);
+
+  } else {
+    console.log('kết quả sai' +result);
+  }
+
+
+function show() {
+  var myObject = {
+  name: 'viet',
+  age: 19,
+  address: 'Hải Dương',
+  myfunction: function() {
+    var result = 1 + 345678;
+      return result;
+  }
+  
+  
+};
+  console.log(myObject,myObject.myfunction());
+
+
+}
+show();
+
+var haha = [3,4,5]
+haha.forEach(i => {
+  console.log(i-1)
+});
+
+
+
+// console.log(hshs.+1);
+var h=[3,4,5];
+for (var i = 0; i < h.length; h++) {
+  h[i]-=1;
+ 
+
+}
+console.log(h);
+
+function ok() {
+  for ( g = 0;  g <= 10; g++) {
+    for ( s = 0; s <= 10; s++) {
+     var result4 = g.length*s;
+    }
+    console.log(result4)
+    
+  }
+}
+ok()
+function copyText() {
+  navigator.clipboard.writeText("hdfghbvfghgy")
+}
+</script>
+<body>
+    <a onclick="copyText()" href="">ấn vào đây để copy</a>
+</body>
+</html>

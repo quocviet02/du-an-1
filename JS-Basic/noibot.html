@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- prevenDefault ngăn chặn hành vi mặc định của trang web
+    stopPropagation ngăn nổi bọt-->
+    <div class="hehe">
+        hehe
+        <h1>
+            lmao
+        </h1>
+    </div>
+    <button type="submit">gửi</button>
+</body>
+<script>
+    //  var sum1 = document.querySelector('button')
+    // sum1.onclick=function (e) {
+    //    e.prevenDefault()
+    // } cái này chưa hiểu
+
+
+
+    var sum = document.querySelector('h1')
+    sum.onclick=function (e) {
+        e.stopPropagation();
+        console.log(e.target)
+    }
+    var bo = document.querySelector('button[type=submit]')
+    function viec1() {
+        console.log('việc 1')
+    }
+    function viec2() {
+        console.log('việc 2')
+    }
+    bo.addEventListener('click', viec1);
+    bo.addEventListener('click', viec2);
+   setTimeout(() => {
+    bo.removeEventListener('click', viec1);
+   }, 4000);
+     
+</script>
+</html>
